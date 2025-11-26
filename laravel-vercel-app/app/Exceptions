@@ -1,0 +1,30 @@
+The file /laravel-vercel-app/laravel-vercel-app/app/Exceptions is intended to contain the application's exception handling logic. Below are the contents for the Handler class that manages exceptions in a Laravel application.
+
+<?php
+
+namespace App\Exceptions;
+
+use Exception;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+
+class Handler extends ExceptionHandler
+{
+    protected $dontReport = [
+        // Add the exception types that you do not want to report
+    ];
+
+    protected $dontFlash = [
+        'password',
+        'password_confirmation',
+    ];
+
+    public function report(Exception $exception)
+    {
+        parent::report($exception);
+    }
+
+    public function render($request, Exception $exception)
+    {
+        return parent::render($request, $exception);
+    }
+}
