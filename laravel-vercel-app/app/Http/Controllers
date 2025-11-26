@@ -1,0 +1,17 @@
+The file /laravel-vercel-app/laravel-vercel-app/app/Http/Controllers is intended to contain controller classes. Since you haven't specified a particular controller to create, I will provide a basic example of a controller file.
+
+Here are the contents for a sample controller named `ExampleController.php`:
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ExampleController extends Controller
+{
+    public function index()
+    {
+        return response()->json(['message' => 'Hello, World!']);
+    }
+}

@@ -1,0 +1,19 @@
+The file /laravel-vercel-app/laravel-vercel-app/app/Http/Middleware is intended to contain middleware classes. Since no specific middleware class has been requested, I will create a default middleware class as an example.
+
+Here are the contents for the file:
+
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+
+class ExampleMiddleware
+{
+    public function handle($request, Closure $next)
+    {
+        // Perform some action before the request is handled
+
+        return $next($request);
+    }
+}
